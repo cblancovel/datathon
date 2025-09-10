@@ -1,0 +1,38 @@
+{
+  "gold": [
+    {
+      "name": "Acme AI",
+      "logo": "img/sponsors/gold-1.png",
+      "url": "#"
+    },
+    {
+      "name": "HealthTech Co.",
+      "logo": "img/sponsors/gold-2.png",
+      "url": "#"
+    }
+  ],
+  "silver": [
+    {
+      "name": "DataWorks",
+      "logo": "img/sponsors/silver-1.png",
+      "url": "#"
+    },
+    {
+      "name": "ModelForge",
+      "logo": "img/sponsors/silver-2.png",
+      "url": "#"
+    }
+  ],
+  "bronze": [
+    {
+      "name": "LabX",
+      "logo": "img/sponsors/bronze-1.png",
+      "url": "#"
+    },
+    {
+      "name": "Cloudify",
+      "logo": "img/sponsors/bronze-2.png",
+      "url": "#"
+    }
+  ]
+}
