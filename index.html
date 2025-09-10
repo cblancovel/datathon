@@ -3,13 +3,16 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Datathon | Datos sintéticos y evaluación</title>
-  <meta name="description" content="Datathon para generar datasets sintéticos y evaluarlos con métricas de semejanza, utilidad y privacidad." />
+  <title>Datathon Hospital Clínico San Carlos</title>
+  <meta name="description" content="Datathon HCSC: Generando valor con datos sintéticos en salud." />
   <meta name="theme-color" content="#0a66c2" />
-  <meta property="og:title" content="Datathon | Datos sintéticos y evaluación" />
-  <meta property="og:description" content="Equipos multidisciplinares, reto de datos sintéticos, métricas y premios." />
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Datathon Hospital Clínico San Carlos" />
+  <meta property="og:description" content="Generando valor con datos sintéticos · 21–22 noviembre 2025 · Madrid" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="logo.png" />
+
   <link rel="manifest" href="manifest.json" />
   <link rel="icon" href="logo.png" />
   <link rel="apple-touch-icon" href="logo.png" />
@@ -19,14 +22,14 @@
 </head>
 <body>
   <header class="site-header">
-    <a class="brand" href="#inicio">Datathon</a>
+    <a class="brand" href="#inicio">Datathon HCSC</a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
     <nav class="site-nav" id="nav">
       <a href="#que-es">Qué es</a>
-      <a href="#reto">Reto</a>
+      <a href="#para-quien">Para quién</a>
+      <a href="#retos">Retos</a>
       <a href="#agenda">Agenda</a>
-      <a href="#premios">Premios</a>
-      <a href="#reglas">Reglas</a>
+      <a href="#patrocinios">Patrocinios</a>
       <a href="#sponsors">Sponsors</a>
       <a class="btn-primary" href="#registro">Registro</a>
     </nav>
@@ -38,22 +41,21 @@
   <main id="inicio">
     <section class="hero">
       <div class="hero-inner">
-        <h1>Datathon: Datos Sintéticos & Evaluación</h1>
-        <p class="lead">
-          Equipos de medicina, ingeniería, farmacia y más. Generad vuestro dataset sintético
-          y evaluadlo con <strong>semejanza, utilidad y privacidad</strong>.
-        </p>
+        <h1>DATATHON HOSPITAL CLÍNICO<br/>SAN CARLOS</h1>
+        <p class="lead">Generando valor con datos sintéticos</p>
 
         <p class="event-meta">
-          <span>📅 <strong id="event-date">21 de noviembre de 2025</strong></span>
-          <span>📍 Hospital Clínico San Carlos (Madrid)</span>
+          <span>📅 <strong id="event-date">21–22 de noviembre de 2025</strong></span>
+          <span>🕒 21 nov (16–21h) · 22 nov (9–14h)</span>
+          <span>📍 Hospital Clínico San Carlos, Madrid</span>
         </p>
 
         <div class="cta-row">
           <a class="btn-primary" href="#registro">Inscribirme</a>
-          <a class="btn-secondary" href="#reto">Ver el reto</a>
+          <a class="btn-secondary" href="#retos">Ver retos</a>
         </div>
 
+        <!-- El contador usa la fecha de app.js (apunta al inicio del día 21) -->
         <div class="countdown" id="countdown" aria-live="polite">
           <div><span id="cd-days">–</span><small>días</small></div>
           <div><span id="cd-hours">–</span><small>h</small></div>
@@ -67,109 +69,113 @@
       <div class="container">
         <h2>¿Qué es el Datathon?</h2>
         <p>
-          Un evento práctico donde cada equipo deberá <strong>generar un conjunto de datos sintéticos</strong> a partir
-          de un dataset base (o propio) y <strong>evaluarlo</strong> con métricas de <em>semejanza</em>, <em>utilidad</em> y <em>privacidad</em>.
+          Encuentro práctico para crear <strong>datos sintéticos en salud</strong> y evaluar su
+          <em>calidad</em>, <em>utilidad</em> y <em>privacidad</em>, además de su aplicación en
+          <strong>modelos predictivos clínicos</strong>. Los equipos (3–5 personas) trabajarán en
+          retos reales con impacto clínico e industrial, documentando código, decisiones y métricas.
         </p>
-        <ul class="bullets">
-          <li>Equipos multidisciplinares (3–5 personas).</li>
-          <li>Puedes usar librerías como <code>SDV/CTGAN</code>, <code>TimeGAN</code> u otras.</li>
-          <li>Entrega final: notebook/código + informe breve con métricas.</li>
-        </ul>
       </div>
     </section>
 
-    <section id="reto" class="section alt">
+    <section id="para-quien" class="section alt">
       <div class="container">
-        <h2>El reto</h2>
-        <ol class="steps">
-          <li>Preprocesar un dataset real (o usar el de referencia que se facilitará).</li>
-          <li>Generar datos sintéticos con la técnica elegida (ej. CTGAN / TimeGAN).</li>
-          <li>Evaluar el resultado en: <strong>semejanza</strong>, <strong>utilidad</strong> y <strong>privacidad</strong>.</li>
-          <li>Preparar una breve demo (3–5 min) y subir el repo con instrucciones.</li>
-        </ol>
-        <p class="tip">Consejo: documenta bien supuestos, parámetros y decisiones para que el jurado pueda reproducirlo.</p>
-      </div>
-    </section>
-
-    <section id="agenda" class="section">
-      <div class="container">
-        <h2>Agenda</h2>
-        <ul class="timeline">
-          <li><strong>09:00</strong> Bienvenida y presentación del reto</li>
-          <li><strong>09:30</strong> Trabajo en equipos</li>
-          <li><strong>13:30</strong> Almuerzo</li>
-          <li><strong>14:30</strong> Trabajo en equipos</li>
-          <li><strong>17:00</strong> Demos</li>
-          <li><strong>18:00</strong> Fallo del jurado y clausura</li>
-        </ul>
-      </div>
-    </section>
-
-    <section id="premios" class="section alt">
-      <div class="container">
-        <h2>Premios</h2>
+        <h2>¿A quién va dirigido? & Enfoque</h2>
         <div class="cards">
           <article class="card">
-            <h3>🥇 1º Premio</h3>
-            <p>Reconocimiento al mejor conjunto de métricas global.</p>
+            <h3>¿A quién va dirigido?</h3>
+            <p class="bullets">
+              Médicos · Ingenieros biomédicos · Bioestadísticos · Farmacéuticos · Biólogos ·
+              Profesionales de datos y del ámbito biosanitario e ingeniería.
+            </p>
           </article>
           <article class="card">
-            <h3>🥈 2º Premio</h3>
-            <p>Destacado en utilidad y reproducibilidad.</p>
-          </article>
-          <article class="card">
-            <h3>🥉 3º Premio</h3>
-            <p>Mención especial a creatividad y presentación.</p>
+            <h3>Enfoque del Datathon</h3>
+            <p class="bullets">
+              Visión integral: generación de datos sintéticos, evaluación de calidad/privacidad,
+              validación de utilidad y transferencia a casos clínicos. Metodología reproducible,
+              métricas transparentes y entrega final en repositorio público.
+            </p>
           </article>
         </div>
       </div>
     </section>
 
-    <section id="reglas" class="section">
+    <section id="retos" class="section">
       <div class="container">
-        <h2>Reglas</h2>
-        <ul class="bullets">
-          <li>Respeta la privacidad y el uso ético de datos.</li>
-          <li>Se permite cualquier librería open-source.</li>
-          <li>Entrega en repositorio público con instrucciones de ejecución.</li>
-          <li>Las decisiones del jurado serán finales.</li>
+        <h2>Retos propuestos</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Oncología</h3>
+            <p>Generación y evaluación de datasets sintéticos para estudios oncológicos (cohortes, respuesta a tratamiento, eventos adversos).</p>
+          </article>
+          <article class="card">
+            <h3>Diabetes</h3>
+            <p>Cohortes sintéticas para análisis de control glucémico, riesgos asociados y soporte a modelos de predicción clínica.</p>
+          </article>
+          <article class="card">
+            <h3>Enfermedades Reumatológicas</h3>
+            <p>Modelización con datos sintéticos en enfermedades inflamatorias y degenerativas para comparar estrategias terapéuticas.</p>
+          </article>
+          <article class="card">
+            <h3>Brazo Control Sintético en Cirugía</h3>
+            <p>Construcción de cohortes de control sintéticas para comparaciones post-intervención cuando no es viable un control real.</p>
+          </article>
+        </div>
+        <p class="tip">Los equipos podrán adaptar el reto a sus datos/contexto manteniendo la evaluación en semejanza, utilidad y privacidad.</p>
+      </div>
+    </section>
+
+    <section id="agenda" class="section alt">
+      <div class="container">
+        <h2>Agenda</h2>
+        <ul class="timeline">
+          <li><strong>Vie 21 · 16:00</strong> Bienvenida y presentación del reto</li>
+          <li><strong>16:30–20:30</strong> Trabajo en equipos + mentorías</li>
+          <li><strong>20:30–21:00</strong> Cierre día 1</li>
+          <li><strong>Sáb 22 · 09:00</strong> Arranque día 2 y pulido de soluciones</li>
+          <li><strong>12:00</strong> Demos</li>
+          <li><strong>13:00</strong> Deliberación del jurado</li>
+          <li><strong>13:30–14:00</strong> Fallo y clausura</li>
         </ul>
       </div>
     </section>
 
-    <section id="sponsors" class="section alt">
+    <section id="patrocinios" class="section">
       <div class="container">
-        <h2>Sponsors</h2>
-
-        <h3 class="tier gold">Gold</h3>
-        <div id="sponsors-gold" class="sponsor-grid" aria-label="Patrocinadores nivel Gold"></div>
-
-        <h3 class="tier silver">Silver</h3>
-        <div id="sponsors-silver" class="sponsor-grid" aria-label="Patrocinadores nivel Silver"></div>
-
-        <h3 class="tier bronze">Bronze</h3>
-        <div id="sponsors-bronze" class="sponsor-grid" aria-label="Patrocinadores nivel Bronze"></div>
-      </div>
-    </section>
-
-    <section id="registro" class="section">
-      <div class="container">
-        <h2>Registro</h2>
-        <p>
-          Para participar, completa el formulario de inscripción. Recibirás confirmación por email con los siguientes pasos.
+        <h2>Patrocinios</h2>
+        <p class="bullets">
+          Acceso a talento, visibilidad en el ecosistema hospitalario y opción de alinear tu marca con la innovación en datos sintéticos.
         </p>
-        <p>
-          <a class="btn-primary btn-lg" href="#" target="_blank" rel="noopener">Abrir formulario de inscripción</a>
-        </p>
-      </div>
-    </section>
-  </main>
+        <div class="cards">
+          <article class="card">
+            <h3>🥉 Bronze · 2.000€</h3>
+            <ul class="bullets">
+              <li>4 entradas a la actividad de formación.</li>
+              <li>Logo en web y materiales promocionales.</li>
+              <li>Menciones en redes y notas de prensa.</li>
+              <li>Inclusión destacada en el dossier del evento.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>🥈 Silver · 3.500€</h3>
+            <ul class="bullets">
+              <li>6 entradas a la actividad de formación.</li>
+              <li>Todo lo incluido en Bronze.</li>
+              <li>Intervención de 5 minutos en el evento.</li>
+              <li>Distribución de material promocional.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>🥇 Gold · 8.000€</h3>
+            <ul class="bullets">
+              <li>Todo lo incluido en Silver + 6 entradas extra.</li>
+              <li>Apoyo o propuesta de un reto propio.</li>
+              <li>Intervención de 10 minutos.</li>
+              <li>Dos equipos trabajando en exclusiva en tu desafío.</li>
+              <li>Máxima visibilidad en todos los canales.</li>
+            </ul>
+          </article
 
-  <footer class="site-footer">
-    <div class="container">
-      <p>© <span id="year"></span> Datathon — Hecho con ♥</p>
-      <p>Contacto: <a href="mailto:organizacion@datathon.local">organizacion@datathon.local</a></p>
-    </div>
   </footer>
 </body>
 </html>
