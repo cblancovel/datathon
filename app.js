@@ -1,6 +1,6 @@
 // Configuración rápida
-const EVENT_DATE = '2025-11-08T09:00:00+01:00'; // Cambia aquí la fecha/hora del evento
-const FORM_URL   = '#'; // Cambia por tu formulario de registro
+const EVENT_DATE = '2025-11-21T16:00:00+01:00'; 
+const FORM_URL   = 'https://forms.office.com/e/y8et5tJF9L'; 
 
 // Toggle de menú móvil
 const nav = document.getElementById('nav');
