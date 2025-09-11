@@ -24,10 +24,10 @@ document.querySelectorAll('a[href="#registro"], a.btn-primary.btn-lg').forEach(a
   });
 });
 
-// Countdown
-(function countdown(){
+document.addEventListener("DOMContentLoaded", () => {
   const target = new Date(EVENT_DATE).getTime();
   const pad = (n)=> String(n).padStart(2,'0');
+
   function tick(){
     const now = Date.now();
     const delta = Math.max(0, target - now);
@@ -35,14 +35,16 @@ document.querySelectorAll('a[href="#registro"], a.btn-primary.btn-lg').forEach(a
     const h = Math.floor((delta / (1000*60*60)) % 24);
     const m = Math.floor((delta / (1000*60)) % 60);
     const s = Math.floor((delta / 1000) % 60);
+
     document.getElementById('cd-days').textContent = d;
     document.getElementById('cd-hours').textContent = pad(h);
     document.getElementById('cd-mins').textContent = pad(m);
     document.getElementById('cd-secs').textContent = pad(s);
   }
+
   tick();
   setInterval(tick, 1000);
-})();
+});
 
 // Avisos dinámicos
 (async function loadNotices(){
