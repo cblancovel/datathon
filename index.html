@@ -21,6 +21,14 @@
   <script defer src="app.js"></script>
 </head>
 <body>
+  <!-- Banda superior IdISSC -->
+  <div class="ribbon">
+    <div class="container ribbon-inner">
+      <span class="ribbon-text">VI Encuentro IdISSC: Sociedad y Ciencia se dan la mano</span>
+      <img class="ribbon-logo" src="img/LOGOS.png" alt="IdISSC" />
+    </div>
+  </div>
+
   <header class="site-header">
     <a class="brand" href="#inicio">Datathon HCSC</a>
     <button class="nav-toggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
@@ -28,10 +36,10 @@
       <a href="#que-es">Qué es</a>
       <a href="#para-quien">Para quién</a>
       <a href="#retos">Retos</a>
+      <a href="#equipo">Equipo coordinador</a>
       <a href="#agenda">Agenda</a>
-      <a href="#patrocinios">Patrocinios</a>
       <a href="#sponsors">Sponsors</a>
-      <a class="btn-primary" href="#registro">Aula virtual</a>
+      <a class="btn-primary" href="https://forms.office.com/e/y8et5tJF9L" target="_blank" rel="noopener">Inscribirme</a>
     </nav>
   </header>
 
@@ -41,32 +49,25 @@
   <main id="inicio">
     <section class="hero">
       <div class="hero-inner">
-        <h1>DATATHON "DATOS SINTÉTICOS EN SALUD" <br/> HOSPITAL CLÍNICOSAN CARLOS</h1>
+        <h1>DATATHON “DATOS SINTÉTICOS EN SALUD”<br/>HOSPITAL CLÍNICO SAN CARLOS</h1>
         <p class="lead">Generando valor con datos sintéticos</p>
 
         <p class="event-meta">
-          <span>📅 <strong id="event-date">21–22 de noviembre de 2025</strong></span>
-          <span>🕒 21 nov (16–21h) · 22 nov (9–14h)</span>
+          <span>📅 <strong id="event-date"></strong></span>
           <span>📍 Hospital Clínico San Carlos, Madrid</span>
         </p>
 
         <div class="cta-row">
-          <a class="btn-primary" 
-          href="https://forms.office.com/e/y8et5tJF9L" 
-          target="_blank" rel="noopener">
-          Inscribirme
-          </a>
+          <a class="btn-primary" href="https://forms.office.com/e/y8et5tJF9L" target="_blank" rel="noopener">Inscribirme</a>
           <a class="btn-secondary" href="#retos">Ver retos</a>
         </div>
 
-        <!-- El contador usa la fecha de app.js (apunta al inicio del día 21) -->
         <div class="countdown" id="countdown" aria-live="polite">
           <div><span id="cd-days">–</span><small>días</small></div>
           <div><span id="cd-hours">–</span><small>h</small></div>
           <div><span id="cd-mins">–</span><small>min</small></div>
           <div><span id="cd-secs">–</span><small>s</small></div>
         </div>
-
       </div>
     </section>
 
@@ -109,66 +110,119 @@
       <div class="container">
         <h2>Retos propuestos</h2>
         <div class="cards">
+
+          <!-- Oncología -->
           <article class="card">
             <h3>Oncología</h3>
             <p>Generación y evaluación de datasets sintéticos para estudios oncológicos (cohortes, respuesta a tratamiento, eventos adversos).</p>
+            <div class="mentores">
+              <figure><img src="img/foto_Carlos.jpeg" alt="Carlos" /><figcaption>Carlos</figcaption></figure>
+              <figure><img src="img/foto_tomas.jpg" alt="Tomás" /><figcaption>Tomás</figcaption></figure>
+            </div>
           </article>
+
+          <!-- Diabetes -->
           <article class="card">
             <h3>Diabetes</h3>
             <p>Cohortes sintéticas para análisis de control glucémico, riesgos asociados y soporte a modelos de predicción clínica.</p>
+            <div class="mentores">
+              <figure><img src="img/foto_marialuaces.png" alt="María Luaces" /><figcaption>María&nbsp;Luaces</figcaption></figure>
+            </div>
           </article>
+
+          <!-- Reumatología -->
           <article class="card">
             <h3>Enfermedades Reumatológicas</h3>
             <p>Modelización con datos sintéticos en enfermedades inflamatorias y degenerativas para comparar estrategias terapéuticas.</p>
+            <div class="mentores">
+              <figure><img src="img/Foto_VSG.jpg" alt="VSG" /><figcaption>VSG</figcaption></figure>
+            </div>
           </article>
+
+          <!-- Cirugía -->
           <article class="card">
             <h3>Brazo Control Sintético en Cirugía</h3>
             <p>Construcción de cohortes de control sintéticas para comparaciones post-intervención cuando no es viable un control real.</p>
+            <div class="mentores">
+              <figure><img src="img/foto_lauralopez.jpg" alt="Laura López" /><figcaption>Laura&nbsp;López</figcaption></figure>
+              <figure><img src="img/foto_giuseppe.jpeg" alt="Giuseppe" /><figcaption>Giuseppe</figcaption></figure>
+              <figure><img src="img/foto_miguelrujas.png" alt="Miguel Rujas" /><figcaption>Miguel&nbsp;Rujas</figcaption></figure>
+              <figure><img src="img/foto_julio.jpg" alt="Julio Mayol" /><figcaption>Julio&nbsp;Mayol</figcaption></figure>
+            </div>
           </article>
+
         </div>
         <p class="tip">Los equipos podrán adaptar el reto a sus datos/contexto manteniendo la evaluación en semejanza, utilidad y privacidad.</p>
       </div>
     </section>
 
-    <section id="agenda" class="section alt">
+    <section id="equipo" class="section alt">
+      <div class="container">
+        <h2>Equipo Coordinador</h2>
+        <div class="team-grid">
+          <figure class="team">
+            <img src="img/foto_laura.jpg" alt="Laura" />
+            <figcaption><strong>Laura</strong><br/><small>Directora</small></figcaption>
+          </figure>
+          <figure class="team">
+            <img src="img/foto_Carlos.jpeg" alt="Carlos" />
+            <figcaption><strong>Carlos</strong><br/><small>Subdirector</small></figcaption>
+          </figure>
+          <figure class="team">
+            <img src="img/foto_kike.jpg" alt="Kike" />
+            <figcaption><strong>Kike</strong><br/><small>Secretario</small></figcaption>
+          </figure>
+          <figure class="team">
+            <img src="img/foto_santi.jpg" alt="Santi" />
+            <figcaption><strong>Santi</strong><br/><small>Secretario</small></figcaption>
+          </figure>
+          <figure class="team special">
+            <img src="img/foto_julio.jpg" alt="Julio Mayol" />
+            <figcaption><strong>Julio Mayol</strong><br/><small>Mención especial</small></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="agenda" class="section">
       <div class="container">
         <h2>Agenda</h2>
         <ul class="timeline">
-          <li><strong>Vie 21 · 16:00</strong> Bienvenida </li>
-          <li><strong>16:15–17:00:</strong> Ponencia inaugural + Presentación del reto</li>
-          <li><strong>17:00–18:30</strong> Trabajo en equipos + mentorías</li>
-          <li><strong>18:30–19:00</strong> Formación </li>
-          <li><strong>19:00–21:00</strong> Trabajo por equipos</li>
-          <li><strong>      </strong>        </li>
-          <li><strong>Sáb 22 · 09:00</strong> Arranque día 2 </li>
-          <li><strong>11:00</strong> Formación </li>
-          <li><strong>12:00</strong> Demos</li>
-          <li><strong>13:00</strong> Deliberación del jurado</li>
-          <li><strong>13:30–14:00</strong> Fallo y clausura</li>
+          <li><strong>Vie 21 · 14:00–15:00</strong> Bienvenida y acreditaciones</li>
+          <li><strong>15:00–16:00</strong> Inauguración y presentación de retos</li>
+          <li><strong>16:00–16:30</strong> Fase I: Research / Charla I</li>
+          <li><strong>17:30–18:00</strong> Pausa café</li>
+          <li><strong>18:00–19:30</strong> Fase II: Trabajo con el dataset / Charla II</li>
+          <li><strong>19:30–20:00</strong> Cierre de jornada</li>
+          <li><strong>Sáb 22 · 09:00–11:00</strong> Fase III: Aplicación / Charla III</li>
+          <li><strong>11:00–11:30</strong> Café</li>
+          <li><strong>11:30–12:00</strong> Fase IV: Preparación de presentaciones</li>
+          <li><strong>12:00–13:30</strong> Evaluación de retos</li>
+          <li><strong>13:30–14:00</strong> Entrega de premios y cierre de jornada</li>
         </ul>
       </div>
     </section>
 
-    <section id="patrocinios" class="section">
+    <section id="sponsors" class="section alt">
       <div class="container">
-        <h2>Patrocinios</h2>
-        <p class="bullets">
-          Acceso a talento, visibilidad en el ecosistema hospitalario y opción de alinear tu marca con la innovación en datos sintéticos.
-        </p>
-        <div class="cards">
-          <article class="card">
-            <h3>🥉 Bronze </h3>
-            
-          </article>
-          <article class="card">
-            <h3>🥈 Silver <h3>
-            
-          </article>
-          <article class="card">
-            <h3>🥇 Gold </h3>
-            
-          </article
+        <h2>Sponsors</h2>
+        <h3 class="tier gold">Gold</h3>
+        <div id="sponsors-gold" class="sponsor-grid" aria-label="Patrocinadores nivel Gold"></div>
 
+        <h3 class="tier silver">Silver</h3>
+        <div id="sponsors-silver" class="sponsor-grid" aria-label="Patrocinadores nivel Silver"></div>
+
+        <h3 class="tier bronze">Bronze</h3>
+        <div id="sponsors-bronze" class="sponsor-grid" aria-label="Patrocinadores nivel Bronze"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> Datathon HCSC — Hecho con ♥</p>
+      <p>Contacto: <a href="mailto:innovacion.hcsc@gmail.com">innovacion.hcsc@gmail.com</a></p>
+    </div>
   </footer>
 </body>
 </html>
