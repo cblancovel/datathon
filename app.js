@@ -3,31 +3,27 @@ const EVENT_DATE = '2025-11-21T16:00:00+01:00';
 const FORM_URL   = 'https://forms.office.com/e/y8et5tJF9L'; 
 
 // Toggle de menú móvil
-const nav = document.getElementById('nav');
-document.querySelector('.nav-toggle').addEventListener('click', () => {
-  const isOpen = nav.classList.toggle('show');
-  document.querySelector('.nav-toggle').setAttribute('aria-expanded', isOpen ? 'true' : 'false');
-});
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById('nav');
+  const toggle = document.querySelector('.nav-toggle');
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      const isOpen = nav.classList.toggle('show');
+      toggle.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  }
 
-// Año en footer
-document.getElementById('year').textContent = new Date().getFullYear();
+  // Año en footer
+  const y = document.getElementById('year');
+  if (y) y.textContent = new Date().getFullYear();
 
-// Enlace de registro
-document.querySelectorAll('a[href="#registro"], a.btn-primary.btn-lg').forEach(a => {
-  a.addEventListener('click', (e) => {
-    const mainCta = e.target.closest('a.btn-primary.btn-lg');
-    if (mainCta && FORM_URL && FORM_URL !== '#') {
-      mainCta.setAttribute('href', FORM_URL);
-      mainCta.setAttribute('target', '_blank');
-      mainCta.setAttribute('rel', 'noopener');
-    }
-  });
-});
+  // Pintar fecha legible en el hero
+  const ed = document.getElementById('event-date');
+  if (ed) ed.textContent = new Date(EVENT_DATE).toLocaleString('es-ES', { dateStyle: 'full', timeStyle: 'short' });
 
-document.addEventListener("DOMContentLoaded", () => {
+  // Countdown (robusto)
   const target = new Date(EVENT_DATE).getTime();
   const pad = (n)=> String(n).padStart(2,'0');
-
   function tick(){
     const now = Date.now();
     const delta = Math.max(0, target - now);
@@ -36,12 +32,17 @@ document.addEventListener("DOMContentLoaded", () => {
     const m = Math.floor((delta / (1000*60)) % 60);
     const s = Math.floor((delta / 1000) % 60);
 
-    document.getElementById('cd-days').textContent = d;
-    document.getElementById('cd-hours').textContent = pad(h);
-    document.getElementById('cd-mins').textContent = pad(m);
-    document.getElementById('cd-secs').textContent = pad(s);
+    const dd = document.getElementById('cd-days');
+    const hh = document.getElementById('cd-hours');
+    const mm = document.getElementById('cd-mins');
+    const ss = document.getElementById('cd-secs');
+    if (dd && hh && mm && ss) {
+      dd.textContent = d;
+      hh.textContent = pad(h);
+      mm.textContent = pad(m);
+      ss.textContent = pad(s);
+    }
   }
-
   tick();
   setInterval(tick, 1000);
 });
@@ -72,9 +73,9 @@ async function renderSponsors(){
       silver: document.getElementById('sponsors-silver'),
       bronze: document.getElementById('sponsors-bronze'),
     };
-    const tiers = ['gold','silver','bronze'];
-    tiers.forEach(tier => {
+    ['gold','silver','bronze'].forEach(tier => {
       const host = map[tier];
+      if (!host) return;
       host.innerHTML = '';
       (data[tier] || []).forEach(sp => {
         const a = document.createElement('a');
@@ -85,9 +86,7 @@ async function renderSponsors(){
         const img = document.createElement('img');
         img.alt = sp.name || 'Sponsor';
         img.src = sp.logo || 'logo.png';
-        img.onerror = () => {
-          a.innerHTML = '<div class="placeholder">'+(sp.name || 'Sponsor')+'</div>';
-        };
+        img.onerror = () => { a.innerHTML = '<div class="placeholder">'+(sp.name || 'Sponsor')+'</div>'; };
         a.appendChild(img);
         host.appendChild(a);
       });
@@ -98,9 +97,7 @@ async function renderSponsors(){
         host.appendChild(empty);
       }
     });
-  }catch(err){
-    // Si falla, dejamos placeholders
-  }
+  }catch(err){ /* noop */ }
 }
 renderSponsors();
 
