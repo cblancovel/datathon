@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const ed = document.getElementById('event-date');
   if (ed) ed.textContent = new Date(EVENT_DATE).toLocaleString('es-ES', { dateStyle: 'full', timeStyle: 'short' });
 
-  // Countdown (robusto)
+  // Countdovwn (robusto)
   const target = new Date(EVENT_DATE).getTime();
   const pad = (n)=> String(n).padStart(2,'0');
   function tick(){
