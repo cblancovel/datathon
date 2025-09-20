@@ -86,8 +86,10 @@ async function renderSponsors(){
         const img = document.createElement('img');
         img.alt = sp.name || 'Sponsor';
         img.src = sp.logo || 'logo.png';
-        img.onerror = () => { a.innerHTML = '<div class="placeholder">'+(sp.name || 'Sponsor')+'</div>'; };
-        a.appendChild(img);
+        img.onerror = () => {
+          a.innerHTML = '<div class="placeholder">Por confirmar</div>';
+        };
+
         host.appendChild(a);
       });
       if(!host.children.length){
