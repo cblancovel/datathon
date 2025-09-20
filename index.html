@@ -19,6 +19,23 @@
   <link rel="preload" href="styles.css" as="style" />
   <link rel="stylesheet" href="styles.css" />
   <script defer src="app.js"></script>
+
+  <!-- Estilos mínimos para nuevas secciones (no toco tu styles.css) -->
+  <style>
+    .advisors { margin-top:.9rem; display:grid; gap:.8rem; }
+    .advisor-group { background:#fff; border:1px solid var(--border); border-radius:.8rem; padding:.6rem; }
+    .advisor-title { font-size:.85rem; font-weight:700; color:#0f172a; margin:0 0 .4rem; }
+    .avatars { display:flex; flex-wrap:wrap; gap:.6rem; }
+    .avatar { text-align:center; }
+    .avatar img { width:64px; height:64px; border-radius:50%; object-fit:cover; border:2px solid #e5e7eb; background:#fff; }
+    .avatar figcaption { font-size:.72rem; color:#334155; margin-top:.25rem; max-width:70px; }
+    .agendas-grid { display:grid; grid-template-columns:1fr 1fr; gap:1rem; }
+    .agenda-card { background:#fff; border:1px solid var(--border); border-radius:1rem; padding:1rem; }
+    .agenda-card h3 { margin-top:0; color:#0f172a; }
+    .timeline h4 { margin: .6rem 0 .4rem; color:#0f172a; font-size:1rem; }
+    .timeline .day-split { margin:.4rem 0; height:1px; background:var(--border); }
+    @media (max-width: 900px){ .agendas-grid{ grid-template-columns:1fr; } }
+  </style>
 </head>
 <body>
   <!-- Banda superior IdISSC -->
@@ -43,7 +60,7 @@
     </nav>
   </header>
 
-  <!-- Aviso dinámicos -->
+  <!-- Avisos dinámicos -->
   <section class="notice" id="notice" hidden></section>
 
   <main id="inicio">
@@ -115,9 +132,25 @@
           <article class="card">
             <h3>Oncología</h3>
             <p>Generación y evaluación de datasets sintéticos para estudios oncológicos (cohortes, respuesta a tratamiento, eventos adversos).</p>
-            <div class="mentores">
-              <figure><img src="img/foto_Carlos.jpeg" alt="Carlos" /><figcaption>Carlos</figcaption></figure>
-              <figure><img src="img/foto_tomas.jpg" alt="Tomás" /><figcaption>Tomás</figcaption></figure>
+            <div class="advisors">
+              <div class="advisor-group">
+                <p class="advisor-title">Medical Advisor</p>
+                <div class="avatars">
+                  <!-- No definido aún → silueta -->
+                  <figure class="avatar">
+                    <img alt="Medical Advisor" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="100%" height="100%" fill="%23e5e7eb"/><circle cx="64" cy="48" r="28" fill="%23cbd5e1"/><rect x="28" y="80" width="72" height="36" rx="18" fill="%23cbd5e1"/></svg>'/>
+                    <figcaption>Por confirmar</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="advisor-group">
+                <p class="advisor-title">Technical Advisors</p>
+                <div class="avatars">
+                  <figure class="avatar"><img src="img/foto_Carlos.jpeg" alt="Carlos"/><figcaption>Carlos</figcaption></figure>
+                  <figure class="avatar"><img src="img/foto_tomas.jpg" alt="Tomás"/><figcaption>Tomás</figcaption></figure>
+                  <figure class="avatar"><img src="img/foto_valeria.jpg" alt="Valeria"/><figcaption>Valeria</figcaption></figure>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -125,8 +158,31 @@
           <article class="card">
             <h3>Diabetes</h3>
             <p>Cohortes sintéticas para análisis de control glucémico, riesgos asociados y soporte a modelos de predicción clínica.</p>
-            <div class="mentores">
-              <figure><img src="img/foto_marialuaces.png" alt="María Luaces" /><figcaption>María&nbsp;Luaces</figcaption></figure>
+            <div class="advisors">
+              <div class="advisor-group">
+                <p class="advisor-title">Medical Advisor</p>
+                <div class="avatars">
+                  <figure class="avatar"><img src="img/foto_marialuaces.png" alt="María Luaces"/><figcaption>María&nbsp;Luaces</figcaption></figure>
+                </div>
+              </div>
+              <div class="advisor-group">
+                <p class="advisor-title">Technical Advisors</p>
+                <div class="avatars">
+                  <!-- Aún sin definir → 3 siluetas -->
+                  <figure class="avatar">
+                    <img alt="Tech Advisor" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="100%" height="100%" fill="%23e5e7eb"/><circle cx="64" cy="48" r="28" fill="%23cbd5e1"/><rect x="28" y="80" width="72" height="36" rx="18" fill="%23cbd5e1"/></svg>'/>
+                    <figcaption>Por confirmar</figcaption>
+                  </figure>
+                  <figure class="avatar">
+                    <img alt="Tech Advisor" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="100%" height="100%" fill="%23e5e7eb"/><circle cx="64" cy="48" r="28" fill="%23cbd5e1"/><rect x="28" y="80" width="72" height="36" rx="18" fill="%23cbd5e1"/></svg>'/>
+                    <figcaption>Por confirmar</figcaption>
+                  </figure>
+                  <figure class="avatar">
+                    <img alt="Tech Advisor" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="100%" height="100%" fill="%23e5e7eb"/><circle cx="64" cy="48" r="28" fill="%23cbd5e1"/><rect x="28" y="80" width="72" height="36" rx="18" fill="%23cbd5e1"/></svg>'/>
+                    <figcaption>Por confirmar</figcaption>
+                  </figure>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -134,8 +190,31 @@
           <article class="card">
             <h3>Enfermedades Reumatológicas</h3>
             <p>Modelización con datos sintéticos en enfermedades inflamatorias y degenerativas para comparar estrategias terapéuticas.</p>
-            <div class="mentores">
-              <figure><img src="img/Foto_VSG.jpg" alt="VSG" /><figcaption>VSG</figcaption></figure>
+            <div class="advisors">
+              <div class="advisor-group">
+                <p class="advisor-title">Medical Advisor</p>
+                <div class="avatars">
+                  <!-- Sin definir -->
+                  <figure class="avatar">
+                    <img alt="Medical Advisor" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="100%" height="100%" fill="%23e5e7eb"/><circle cx="64" cy="48" r="28" fill="%23cbd5e1"/><rect x="28" y="80" width="72" height="36" rx="18" fill="%23cbd5e1"/></svg>'/>
+                    <figcaption>Por confirmar</figcaption>
+                  </figure>
+                </div>
+              </div>
+              <div class="advisor-group">
+                <p class="advisor-title">Technical Advisors</p>
+                <div class="avatars">
+                  <figure class="avatar"><img src="img/Foto_VSG.jpg" alt="VSG"/><figcaption>VSG</figcaption></figure>
+                  <figure class="avatar">
+                    <img alt="Tech Advisor" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="100%" height="100%" fill="%23e5e7eb"/><circle cx="64" cy="48" r="28" fill="%23cbd5e1"/><rect x="28" y="80" width="72" height="36" rx="18" fill="%23cbd5e1"/></svg>'/>
+                    <figcaption>Por confirmar</figcaption>
+                  </figure>
+                  <figure class="avatar">
+                    <img alt="Tech Advisor" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="100%" height="100%" fill="%23e5e7eb"/><circle cx="64" cy="48" r="28" fill="%23cbd5e1"/><rect x="28" y="80" width="72" height="36" rx="18" fill="%23cbd5e1"/></svg>'/>
+                    <figcaption>Por confirmar</figcaption>
+                  </figure>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -143,11 +222,21 @@
           <article class="card">
             <h3>Brazo Control Sintético en Cirugía</h3>
             <p>Construcción de cohortes de control sintéticas para comparaciones post-intervención cuando no es viable un control real.</p>
-            <div class="mentores">
-              <figure><img src="img/foto_lauralopez.jpg" alt="Laura López" /><figcaption>Laura&nbsp;López</figcaption></figure>
-              <figure><img src="img/foto_giuseppe.jpeg" alt="Giuseppe" /><figcaption>Giuseppe</figcaption></figure>
-              <figure><img src="img/foto_miguelrujas.png" alt="Miguel Rujas" /><figcaption>Miguel&nbsp;Rujas</figcaption></figure>
-              <figure><img src="img/foto_julio.jpg" alt="Julio Mayol" /><figcaption>Julio&nbsp;Mayol</figcaption></figure>
+            <div class="advisors">
+              <div class="advisor-group">
+                <p class="advisor-title">Medical Advisor</p>
+                <div class="avatars">
+                  <figure class="avatar"><img src="img/foto_julio.jpg" alt="Julio Mayol"/><figcaption>Julio&nbsp;Mayol</figcaption></figure>
+                </div>
+              </div>
+              <div class="advisor-group">
+                <p class="advisor-title">Technical Advisors</p>
+                <div class="avatars">
+                  <figure class="avatar"><img src="img/foto_lauralopez.jpg" alt="Laura López"/><figcaption>Laura&nbsp;López</figcaption></figure>
+                  <figure class="avatar"><img src="img/foto_giuseppe.jpeg" alt="Giuseppe"/><figcaption>Giuseppe</figcaption></figure>
+                  <figure class="avatar"><img src="img/foto_miguelrujas.png" alt="Miguel Rujas"/><figcaption>Miguel&nbsp;Rujas</figcaption></figure>
+                </div>
+              </div>
             </div>
           </article>
 
@@ -176,9 +265,13 @@
             <img src="img/foto_santi.jpg" alt="Santi" />
             <figcaption><strong>Santi</strong><br/><small>Secretario</small></figcaption>
           </figure>
+          <figure class="team">
+            <img src="img/foto_tomas.jpg" alt="Tomás" />
+            <figcaption><strong>Tomás</strong><br/><small>Maestro de ceremonias</small></figcaption>
+          </figure>
           <figure class="team special">
             <img src="img/foto_julio.jpg" alt="Julio Mayol" />
-            <figcaption><strong>Julio Mayol</strong><br/><small>Mención especial</small></figcaption>
+            <figcaption><strong>Julio Mayol</strong><br/><small>Maestro de ceremonias</small></figcaption>
           </figure>
         </div>
       </div>
@@ -187,19 +280,63 @@
     <section id="agenda" class="section">
       <div class="container">
         <h2>Agenda</h2>
-        <ul class="timeline">
-          <li><strong>Vie 21 · 14:00–15:00</strong> Bienvenida y acreditaciones</li>
-          <li><strong>15:00–16:00</strong> Inauguración y presentación de retos</li>
-          <li><strong>16:00–16:30</strong> Fase I: Research / Charla I</li>
-          <li><strong>17:30–18:00</strong> Pausa café</li>
-          <li><strong>18:00–19:30</strong> Fase II: Trabajo con el dataset / Charla II</li>
-          <li><strong>19:30–20:00</strong> Cierre de jornada</li>
-          <li><strong>Sáb 22 · 09:00–11:00</strong> Fase III: Aplicación / Charla III</li>
-          <li><strong>11:00–11:30</strong> Café</li>
-          <li><strong>11:30–12:00</strong> Fase IV: Preparación de presentaciones</li>
-          <li><strong>12:00–13:30</strong> Evaluación de retos</li>
-          <li><strong>13:30–14:00</strong> Entrega de premios y cierre de jornada</li>
-        </ul>
+
+        <div class="agendas-grid">
+          <!-- Competición -->
+          <div class="agenda-card">
+            <h3>Competición</h3>
+            <ul class="timeline">
+              <h4>Viernes 21 de noviembre</h4>
+              <li><strong>14:00–15:00</strong> Bienvenida y acreditaciones</li>
+              <li><strong>15:00–16:00</strong> Inauguración y presentación de retos</li>
+              <li><strong>16:00–17:30</strong> Fase I: Research</li>
+              <li><strong>17:30–18:00</strong> Networking</li>
+              <li><strong>18:00–19:30</strong> Fase II: Dataset production</li>
+              <li><strong>19:30–20:00</strong> Cierre de jornada</li>
+
+              <div class="day-split"></div>
+              <h4>Sábado 22 de noviembre</h4>
+              <li><strong>09:00–11:00</strong> Fase III: Clinical application</li>
+              <li><strong>11:00–11:30</strong> Café</li>
+              <li><strong>11:30–12:00</strong> Fase IV: Presentations preparation</li>
+              <li><strong>12:00–13:30</strong> Evaluación de retos</li>
+              <li><strong>13:30–14:00</strong> Entrega de premios y cierre de jornada</li>
+            </ul>
+          </div>
+
+          <!-- Formación -->
+          <div class="agenda-card">
+            <h3>Formación</h3>
+            <ul class="timeline">
+              <h4>Viernes 21 de noviembre</h4>
+              <li><strong>17:00</strong> Ponencia 1</li>
+              <li><strong>17:20</strong> Ponencia 2</li>
+              <li><strong>17:40</strong> Ponencia 3</li>
+              <li><strong>18:00–19:00</strong> Networking</li>
+              <li><strong>19:00</strong> Ponencia magistral 1</li>
+              <li><strong>19:30</strong> Ponencia magistral 2</li>
+
+              <div class="day-split"></div>
+              <h4>Sábado 22 de noviembre</h4>
+              <li><strong>—</strong> (Sesiones formativas opcionales)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="jurado" class="section alt">
+      <div class="container">
+        <h2>Jurado</h2>
+        <div class="mentores">
+          <figure class="avatar"><img src="img/foto_julio.jpg" alt="Julio Mayol"/><figcaption>Julio&nbsp;Mayol</figcaption></figure>
+          <figure class="avatar"><img src="img/foto_marialuaces.png" alt="María Luaces"/><figcaption>María&nbsp;Luaces</figcaption></figure>
+          <figure class="avatar"><img src="img/foto_giuseppe.jpeg" alt="Giuseppe Fico"/><figcaption>Giuseppe&nbsp;Fico</figcaption></figure>
+          <figure class="avatar">
+            <img alt="Jurado invitado" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128"><rect width="100%" height="100%" fill="%23e5e7eb"/><circle cx="64" cy="48" r="28" fill="%23cbd5e1"/><rect x="28" y="80" width="72" height="36" rx="18" fill="%23cbd5e1"/></svg>'/>
+            <figcaption>Jurado invitado</figcaption>
+          </figure>
+        </div>
       </div>
     </section>
 
@@ -226,3 +363,4 @@
   </footer>
 </body>
 </html>
+
