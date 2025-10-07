@@ -73,7 +73,7 @@ async function renderSponsors(){
       silver: document.getElementById('sponsors-silver'),
       bronze: document.getElementById('sponsors-bronze'),
     };
-    ['gold','silver','bronze','Colaboradores'].forEach(tier => {
+    ['gold','silver','bronze','colaboradores'].forEach(tier => {
       const host = map[tier];
       if (!host) return;
       host.innerHTML = '';
