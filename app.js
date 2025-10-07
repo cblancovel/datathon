@@ -87,17 +87,18 @@ async function renderSponsors(){
         img.alt = sp.name || 'Sponsor';
         img.src = sp.logo || 'logo.png';
         img.onerror = () => {
-          a.innerHTML = '<div class="placeholder">Por confirmar</div>';
+          a.innerHTML = '<div class="placeholder">'+(sp.name || 'Sponsor')+'</div>';
         };
-
+        a.appendChild(img);
         host.appendChild(a);
-      });
-      if(!host.children.length){
-        const empty = document.createElement('div');
-        empty.className = 'sponsor';
-        empty.innerHTML = '<div class="placeholder">Tu logo aquí</div>';
-        host.appendChild(empty);
-      }
+        });
+        if(!host.children.length){
+          const empty = document.createElement('div');
+          empty.className = 'sponsor';
+          empty.innerHTML = '<div class="placeholder">Tu logo aquí</div>';
+          host.appendChild(empty);
+        }
+
     });
   }catch(err){ /* noop */ }
 }
