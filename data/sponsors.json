@@ -1,20 +1,20 @@
 {
   "gold": [
     {
-      "name": "Acme AI",
-      "logo": "img/sponsors/gold-1.png",
-      "url": "#"
+      "name": "Bristol Myers Squibb",
+      "logo": "img/sponsors/logo_bms.png",
+      "url": "https://www.bms.com/es"
     },
     {
-      "name": "HealthTech Co.",
-      "logo": "img/sponsors/gold-2.png",
+      "name": "Pfizer",
+      "logo": "img/sponsors/logo_pfizer.png",
       "url": "#"
     }
   ],
   "silver": [
     {
-      "name": "DataWorks",
-      "logo": "img/sponsors/silver-1.png",
+      "name": "Atrys Health",
+      "logo": "img/sponsors/logo_atrys.png",
       "url": "#"
     },
     {
@@ -25,8 +25,8 @@
   ],
   "bronze": [
     {
-      "name": "LabX",
-      "logo": "img/sponsors/bronze-1.png",
+      "name": "Quibim",
+      "logo": "img/sponsors/logo_quibim.png",
       "url": "#"
     },
     {
