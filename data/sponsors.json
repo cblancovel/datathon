@@ -2,19 +2,19 @@
   "gold": [
     {
       "name": "Bristol Myers Squibb",
-      "logo": "img/sponsors/logo_bms.png",
+      "logo": "img/logo_bms.png",
       "url": "https://www.bms.com/es"
     },
     {
       "name": "Pfizer",
-      "logo": "img/sponsors/logo_pfizer.png",
+      "logo": "img/logo_pfizer.png",
       "url": "#"
     }
   ],
   "silver": [
     {
       "name": "Atrys Health",
-      "logo": "img/sponsors/logo_atrys.png",
+      "logo": "img/logo_atrys.png",
       "url": "#"
     },
     {
@@ -26,7 +26,7 @@
   "bronze": [
     {
       "name": "Quibim",
-      "logo": "img/sponsors/logo_quibim.png",
+      "logo": "img/logo_quibim.png",
       "url": "#"
     },
     {
