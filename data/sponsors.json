@@ -8,31 +8,33 @@
     {
       "name": "Pfizer",
       "logo": "img/logo_pfizer.png",
-      "url": "#"
+      "url": "https://www.pfizer.es/"
     }
   ],
   "silver": [
     {
       "name": "Atrys Health",
       "logo": "img/logo_atrys.png",
-      "url": "#"
-    },
-    {
-      "name": "ModelForge",
-      "logo": "img/sponsors/silver-2.png",
-      "url": "#"
+      "url": "https://www.atryshealth.com/en/"
     }
   ],
   "bronze": [
     {
       "name": "Quibim",
       "logo": "img/logo_quibim.png",
-      "url": "#"
+      "url": "https://quibim.com/"
+    }
+  ]
+  "Colaboradores": [
+    {
+      "name": "Synthetrial",
+      "logo": "img/logo_synthetrial.png",
+      "url": "https://synthetrial.com/"
     },
     {
-      "name": "Cloudify",
-      "logo": "img/sponsors/bronze-2.png",
-      "url": "#"
+      "name": "Fundación Visible",
+      "logo": "img/logo_fundacionvisible.png",
+      "url": "https://www.fundacionvisible.org/"
     }
   ]
 }
