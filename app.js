@@ -1,4 +1,4 @@
-// Configuración rapida
+// Configuracion rapida
 const EVENT_DATE = '2025-11-21T14:00:00+01:00'; 
 const FORM_URL   = 'https://forms.office.com/e/y8et5tJF9L'; 
 
