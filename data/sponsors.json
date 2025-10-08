@@ -8,8 +8,8 @@
   ],
   "golde": [
     {
-      "name": "Por confirmar",
-      "logo": "",
+      "name": "Pfizer",
+      "logo": "img/logo_pfizer.png",
       "url": "https://www.pfizer.es/"
     }
   ],
@@ -34,8 +34,8 @@
       "url": "https://synthetrial.com/"
     },
     {
-      "name": "Por confirmar",
-      "logo": "",
+      "name": "Fundacion Visible",
+      "logo": "img/logo_fundacionvisible.png",
       "url": "https://www.fundacionvisible.org/"
     }
   ]
