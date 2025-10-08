@@ -4,10 +4,12 @@
       "name": "Bristol Myers Squibb",
       "logo": "img/logo_bms.png",
       "url": "https://www.bms.com/es"
-    },
+    }
+  ],
+  "golde": [
     {
       "name": "Pfizer",
-      "logo": "img/logo_pfizer.png",
+      "logo": "img/sponsors/logo_pfizer.png",
       "url": "https://www.pfizer.es/"
     }
   ],
