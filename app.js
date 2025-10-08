@@ -70,11 +70,12 @@ async function renderSponsors(){
     const data = await res.json();
     const map = {
       gold: document.getElementById('sponsors-gold'),
+      golde: document.getElementById('sponsors-golde'),
       silver: document.getElementById('sponsors-silver'),
       bronze: document.getElementById('sponsors-bronze'),
       colaboradores: document.getElementById('sponsors-colaboradores'),
     };
-    ['gold','silver','bronze','colaboradores'].forEach(tier => {
+    ['gold','golde','silver','bronze','colaboradores'].forEach(tier => {
       const host = map[tier];
       if (!host) return;
       host.innerHTML = '';
