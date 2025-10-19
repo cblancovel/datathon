@@ -202,7 +202,7 @@
           </div>
         </div>
         <div class="reto-pdf">
-          <a href="pdfs/Cirugia RETO.pdf" target="_blank" rel="noopener" class="btn-secondary">📄 Ver cartel del reto</a>
+          <a href="pdfs/Reuma RETO.pdf" target="_blank" rel="noopener" class="btn-secondary">📄 Ver cartel del reto</a>
         </div>
       </article>
 
@@ -378,11 +378,17 @@
     </div>
   </footer>
 
-  <!-- Modal visor de PDF -->
+ <!-- ===== Modal visor de PDF con spinner ===== -->
 <div id="pdfModal" class="pdf-modal" hidden>
   <div class="pdf-modal-backdrop"></div>
   <div class="pdf-modal-content">
     <button id="pdfClose" class="pdf-close" aria-label="Cerrar">×</button>
+
+    <div id="pdfSpinner" class="pdf-spinner" hidden>
+      <div class="spinner"></div>
+      <p>Cargando...</p>
+    </div>
+
     <iframe id="pdfViewer" src="" frameborder="0"></iframe>
   </div>
 </div>
