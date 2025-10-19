@@ -124,16 +124,15 @@ if ('serviceWorker' in navigator) {
 // =============================
 // Visor modal de PDFs de retos
 // =============================
-document.addEventListener('DOMContentLoaded', () => {
+window.addEventListener('load', () => {
   const modal = document.getElementById('pdfModal');
   const viewer = document.getElementById('pdfViewer');
   const closeBtn = document.getElementById('pdfClose');
 
-  // Cerrar al pulsar la X o fuera del contenido
-  function closeModal(){
+  function closeModal() {
     viewer.src = '';
     modal.hidden = true;
-    document.body.style.overflow = ''; // restaura scroll
+    document.body.style.overflow = '';
   }
 
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
@@ -143,7 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  // Abrir modal desde los botones
+  // Detectar clic en los enlaces de reto
   document.querySelectorAll('.reto-pdf a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
@@ -151,7 +150,7 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!pdfUrl) return;
       viewer.src = pdfUrl;
       modal.hidden = false;
-      document.body.style.overflow = 'hidden'; // bloquea scroll fondo
+      document.body.style.overflow = 'hidden';
     });
   });
 });
