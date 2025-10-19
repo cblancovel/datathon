@@ -134,6 +134,24 @@ h3{margin:0 0 .6rem}
   background:#fff;color:var(--muted);text-align:center
 }
 
+.reto-pdf {
+  margin-top: .8rem;
+  text-align: right;
+}
+.reto-pdf .btn-secondary {
+  background: var(--border);
+  color: #0f172a;
+  padding: .4rem .8rem;
+  border-radius: .5rem;
+  font-size: .8rem;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.reto-pdf .btn-secondary:hover {
+  background: #0a66c2;
+  color: #fff;
+}
+
 /* Responsive */
 @media (max-width: 860px){
   .nav-toggle{display:block}
