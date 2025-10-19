@@ -144,7 +144,7 @@ if ('serviceWorker' in navigator) {
 }
 
 // =============================
-// Visor modal de PDFs de retos con spinner
+// Visor modal de PDFs o imágenes con spinner
 // =============================
 window.addEventListener('load', () => {
   const modal = document.getElementById('pdfModal');
@@ -152,50 +152,59 @@ window.addEventListener('load', () => {
   const closeBtn = document.getElementById('pdfClose');
   const spinner = document.getElementById('pdfSpinner');
 
+  // Crear contenedor de imagen si no existe
+  let imgViewer = document.createElement('img');
+  imgViewer.id = 'imgViewer';
+  imgViewer.style.cssText = 'width:100%;height:100%;object-fit:contain;display:none;';
+  modal.querySelector('.pdf-modal-content').appendChild(imgViewer);
+
   function closeModal() {
     viewer.src = '';
+    imgViewer.src = '';
     modal.hidden = true;
     spinner.hidden = true;
+    viewer.style.display = 'none';
+    imgViewer.style.display = 'none';
     document.body.style.overflow = '';
   }
 
   if (closeBtn) closeBtn.addEventListener('click', closeModal);
-  if (modal) {
-    modal.addEventListener('click', e => {
-      if (
-        e.target.classList.contains('pdf-modal') ||
-        e.target.classList.contains('pdf-modal-backdrop')
-      ) {
-        closeModal();
-      }
-    });
-  }
+  if (modal) modal.addEventListener('click', e => {
+    if (e.target.classList.contains('pdf-modal') || e.target.classList.contains('pdf-modal-backdrop')) {
+      closeModal();
+    }
+  });
 
   // Detectar clic en los enlaces de reto
   document.querySelectorAll('.reto-pdf a').forEach(link => {
     link.addEventListener('click', e => {
       e.preventDefault();
-      const pdfUrl = link.getAttribute('href');
-      if (!pdfUrl) return;
+      const url = link.getAttribute('href');
+      if (!url) return;
 
       spinner.hidden = false;
-      viewer.hidden = true;
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
+      viewer.style.display = 'none';
+      imgViewer.style.display = 'none';
 
-      if (pdfUrl.endsWith('.png') || pdfUrl.endsWith('.jpg') || pdfUrl.endsWith('.jpeg')) {
-  viewer.src = '';
-  viewer.outerHTML = `<img id="pdfViewer" src="${pdfUrl}" style="width:100%;height:100%;object-fit:contain;" alt="Cartel del reto">`;
-} else {
-  viewer.src = pdfUrl;
-}
-
-
-      viewer.onload = () => {
-        spinner.hidden = true;
-        viewer.hidden = false;
-      };
+      // Según tipo de archivo: PDF → iframe | PNG/JPG → img
+      const lower = url.toLowerCase();
+      if (lower.endsWith('.png') || lower.endsWith('.jpg') || lower.endsWith('.jpeg')) {
+        imgViewer.src = url;
+        imgViewer.onload = () => {
+          spinner.hidden = true;
+          imgViewer.style.display = 'block';
+        };
+      } else {
+        viewer.src = url;
+        viewer.onload = () => {
+          spinner.hidden = true;
+          viewer.style.display = 'block';
+        };
+      }
     });
   });
 });
+
 
