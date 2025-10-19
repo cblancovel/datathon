@@ -61,6 +61,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }catch(e){ /* noop */ }
 })();
+<!-- Modal visor de PDF -->
+<div id="pdfModal" class="pdf-modal" hidden>
+  <div class="pdf-modal-backdrop"></div>
+  <div class="pdf-modal-content">
+    <button id="pdfClose" class="pdf-close" aria-label="Cerrar">×</button>
+    <iframe id="pdfViewer" src="" frameborder="0"></iframe>
+  </div>
+</div>
 
 // Sponsors dinámicos
 async function renderSponsors(){
@@ -112,3 +120,39 @@ if ('serviceWorker' in navigator) {
     navigator.serviceWorker.register('service-worker.js').catch(()=>{});
   });
 }
+
+// =============================
+// Visor modal de PDFs de retos
+// =============================
+document.addEventListener('DOMContentLoaded', () => {
+  const modal = document.getElementById('pdfModal');
+  const viewer = document.getElementById('pdfViewer');
+  const closeBtn = document.getElementById('pdfClose');
+
+  // Cerrar al pulsar la X o fuera del contenido
+  function closeModal(){
+    viewer.src = '';
+    modal.hidden = true;
+    document.body.style.overflow = ''; // restaura scroll
+  }
+
+  if (closeBtn) closeBtn.addEventListener('click', closeModal);
+  if (modal) modal.addEventListener('click', e => {
+    if (e.target.classList.contains('pdf-modal') || e.target.classList.contains('pdf-modal-backdrop')) {
+      closeModal();
+    }
+  });
+
+  // Abrir modal desde los botones
+  document.querySelectorAll('.reto-pdf a').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const pdfUrl = link.getAttribute('href');
+      if (!pdfUrl) return;
+      viewer.src = pdfUrl;
+      modal.hidden = false;
+      document.body.style.overflow = 'hidden'; // bloquea scroll fondo
+    });
+  });
+});
+
