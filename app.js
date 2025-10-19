@@ -183,7 +183,13 @@ window.addEventListener('load', () => {
       modal.hidden = false;
       document.body.style.overflow = 'hidden';
 
-      viewer.src = pdfUrl;
+      if (pdfUrl.endsWith('.png') || pdfUrl.endsWith('.jpg') || pdfUrl.endsWith('.jpeg')) {
+  viewer.src = '';
+  viewer.outerHTML = `<img id="pdfViewer" src="${pdfUrl}" style="width:100%;height:100%;object-fit:contain;" alt="Cartel del reto">`;
+} else {
+  viewer.src = pdfUrl;
+}
+
 
       viewer.onload = () => {
         spinner.hidden = true;
