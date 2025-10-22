@@ -37,6 +37,16 @@
       "name": "Fundacion Visible",
       "logo": "img/logo_fundacionvisible.png",
       "url": "https://www.fundacionvisible.org/"
+    },
+    {
+      "name": "Unidad de Innovación Clínico San Carlos",
+      "logo": "img/logo_ui.jpg",
+      "url": "https://unidaddeinnovacion.shealth.eu/"
+    },
+    {
+      "name": "Life Supporting Technologies UPM",
+      "logo": "img/logo_lst.jpg",
+      "url": "https://www.lst.tfo.upm.es/"
     }
   ]
 }
