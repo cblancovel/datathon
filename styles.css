@@ -23,7 +23,7 @@ body{
 
 .container{width:min(1100px,92%);margin:0 auto}
 
-/* Ribbon IdISSC */
+/* Ribon IdISSC */
 .ribbon{background:#eef2f7;border-bottom:1px solid var(--border)}
 .ribbon-inner{display:flex;align-items:center;justify-content:space-between;padding:.4rem 0}
 .ribbon-text{font-size:.9rem;color:#1f2937}
