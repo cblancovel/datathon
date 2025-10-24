@@ -231,8 +231,7 @@ h3{margin:0 0 .6rem}
   height: 30px; /* Ajusta esta altura según lo que necesites */
   visibility: hidden; /* No se ve, solo ocupa espacio */
 }
-
-/* Estilos para blxoques vacíos */
+/* Estilos para bloques vacíos */
 .empty-hour {
   height: 30px; /* Ajusta esta altura según lo que necesites */
   visibility: hidden; /* No se ve, solo ocupa espacio */
@@ -276,4 +275,3 @@ h3{margin:0 0 .6rem}
   height: 1px;
   background: var(--border);
 }
-
