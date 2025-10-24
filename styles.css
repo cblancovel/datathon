@@ -91,6 +91,12 @@ h3{margin:0 0 .6rem}
 }
 .mentores figcaption{font-size:.75rem;color:#334155;margin-top:.25rem}
 
+/* Estilos para bloques vacíos */
+.empty-hour {
+  height: 30px; /* Ajusta esta altura según lo que necesites */
+  visibility: hidden; /* No se ve, solo ocupa espacio */
+}
+
 /* Equipo Coordinador */
 .team-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:1rem}
 .team{padding:1rem;background:#fff;border:1px solid var(--border);border-radius:1rem;text-align:center}
