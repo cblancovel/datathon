@@ -254,13 +254,13 @@ h3{margin:0 0 .6rem}
 
 .timeline {
   display: grid;
-  grid-template-columns: auto 1fr; /* Columna con hora y texto */
+  grid-template-columns: 1fr; /* Una sola columna para las horas */
   gap: 1rem;
 }
 
 .timeline li {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Alinea las horas a la izquierda */
   align-items: center;
 }
 
