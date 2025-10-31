@@ -47,6 +47,11 @@
       "name": "Life Supporting Technologies UPM",
       "logo": "img/logo_lst.jpg",
       "url": "https://www.lst.tfo.upm.es/"
+    },
+     {
+      "name": "SEDISA",
+      "logo": "img/logo_sedisa.png",
+      "url": "https://sedisa.net/"
     }
   ]
 }
